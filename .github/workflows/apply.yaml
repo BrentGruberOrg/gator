@@ -33,5 +33,8 @@ jobs:
         id: init
         run: terraform init
 
+      - name: Check Env Vars
+        run: '[ -z "${TF_VAR_DO_DOMAIN}" ]'
+
       - name: Terraform Apply
         run: terraform apply -auto-approve -input=false
