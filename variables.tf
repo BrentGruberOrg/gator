@@ -1,7 +1,6 @@
 variable "DO_TOKEN" {}
 variable "DO_DOMAIN" {}
 variable "TAILSCALE_TOKEN" {}
-variable "pvt_key" {}
 variable "image" {
   default = "ubuntu-20-04-x64"
 }

@@ -14,7 +14,7 @@ resource "digitalocean_droplet" "caddy" {
     host        = self.ipv4_address
     user        = "root"
     type        = "ssh"
-    private_key = file(var.pvt_key)
+    agent       = true
     timeout     = "2m"
   }
 
