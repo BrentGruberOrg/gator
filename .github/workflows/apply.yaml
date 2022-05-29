@@ -36,7 +36,7 @@ jobs:
       - name: Check env var
         run: echo $TF_VAR_DO_DOMAIN
         env:
-          TF_VAR_DO_DOMAIN=${{ secrets.TF_VAR_DO_DOMAIN }}
+          TF_VAR_DO_DOMAIN: ${{ secrets.TF_VAR_DO_DOMAIN }}
 
       # - name: Terraform Apply
       #   run: terraform apply -auto-approve
