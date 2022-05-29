@@ -1,0 +1,3 @@
+mist.brentgruber.com {
+    reverse_proxy 100.122.92.33:80
+}
