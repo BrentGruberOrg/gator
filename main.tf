@@ -1,5 +1,5 @@
 resource "digitalocean_droplet" "caddy" {
-  count  = var.count
+  count  = var.droplet_count
   image  = var.image
   name   = "www-${count.index}"
   region = var.region
