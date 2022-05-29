@@ -11,11 +11,11 @@ resource "digitalocean_droplet" "caddy" {
   ]
 
   connection {
-    host        = self.ipv4_address
-    user        = "root"
-    type        = "ssh"
-    agent       = true
-    timeout     = "2m"
+    host    = self.ipv4_address
+    user    = "root"
+    type    = "ssh"
+    agent   = true
+    timeout = "2m"
   }
 
   provisioner "file" {
