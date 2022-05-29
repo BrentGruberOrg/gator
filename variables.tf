@@ -11,3 +11,6 @@ variable "region" {
 variable "size" {
     default = "s-1vcpu-1gb"
 }
+variable "count" {
+    default = 1
+}
