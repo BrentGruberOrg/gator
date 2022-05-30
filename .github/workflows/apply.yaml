@@ -38,8 +38,9 @@ jobs:
         
         # Replace the caddy server every time to force reconfigure
         # this is a stop gap until config is extracted from IaC
+        # NOTE: splat replace currently not supported, https://github.com/hashicorp/terraform/issues/30350
       - name: Terraform Apply
-        run: terraform apply -auto-approve -input=false -replace=digitalocean_droplet.caddy[*]
+        run: terraform apply -auto-approve -input=false -replace=digitalocean_droplet.caddy[0]
         env:
           TF_VAR_DO_DOMAIN: ${{ secrets.TF_VAR_DO_DOMAIN }}
           TF_VAR_DO_TOKEN: ${{ secrets.TF_VAR_DO_TOKEN }}
