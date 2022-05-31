@@ -45,3 +45,4 @@ jobs:
           TF_VAR_DO_DOMAIN: ${{ secrets.TF_VAR_DO_DOMAIN }}
           TF_VAR_DO_TOKEN: ${{ secrets.TF_VAR_DO_TOKEN }}
           TF_VAR_TAILSCALE_TOKEN: ${{ secrets.TF_VAR_TAILSCALE_TOKEN }}
+          TF_VAR_GCLOUD_TOKEN: ${{ secrets.TF_VAR_GCLOUD_TOKEN }}
