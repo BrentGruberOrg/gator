@@ -1,6 +1,7 @@
 variable "DO_TOKEN" {}
 variable "DO_DOMAIN" {}
 variable "TAILSCALE_TOKEN" {}
+variable "GCLOUD_TOKEN" {}
 variable "image" {
   default = "ubuntu-20-04-x64"
 }

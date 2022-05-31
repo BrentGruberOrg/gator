@@ -33,12 +33,19 @@ resource "digitalocean_droplet" "caddy" {
     destination = "/tmp/Caddyfile"
   }
 
+  provisioner "file" {
+    source      = "scripts/grafana-agent.sh"
+    destination = "/tmp/grafana-agent.sh"
+  }
+
   provisioner "remote-exec" {
     inline = [
       "chmod +x /tmp/tailscale.sh",
       "/tmp/tailscale.sh ${var.TAILSCALE_TOKEN}",
       "chmod +x /tmp/caddy.sh",
-      "/tmp/caddy.sh"
+      "/tmp/caddy.sh",
+      "chmod +x /tmp/grafana-agent.sh",
+      "/tmp/grafana-agent.sh ${var.GCLOUD_TOKEN}"
     ]
   }
 }
