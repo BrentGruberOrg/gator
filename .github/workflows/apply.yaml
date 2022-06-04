@@ -46,3 +46,8 @@ jobs:
           TF_VAR_DO_TOKEN: ${{ secrets.TF_VAR_DO_TOKEN }}
           TF_VAR_TAILSCALE_TOKEN: ${{ secrets.TF_VAR_TAILSCALE_TOKEN }}
           TF_VAR_GCLOUD_TOKEN: ${{ secrets.TF_VAR_GCLOUD_TOKEN }}
+          TF_VAR_GCLOUD_PASSWORD: ${{ secrets.TF_VAR_GCLOUD_PASSWORD }}
+          TF_VAR_GCLOUD_METRICS_USER: ${{ secrets.TF_VAR_GCLOUD_METRICS_USER }}
+          TF_VAR_GCLOUD_LOGS_USER: ${{ secrets.TF_VAR_GCLOUD_LOGS_USER }}
+          TF_VAR_GCLOUD_TRACES_USER: ${{ secrets.TF_VAR_GCLOUD_TRACES_USER }}
+          TF_VAR_GAGENT_PROFILE: ${{ secrets.TF_VAR_GAGENT_PROFILE }}
