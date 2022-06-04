@@ -44,8 +44,8 @@ resource "digitalocean_droplet" "caddy" {
       "/tmp/tailscale.sh ${var.TAILSCALE_TOKEN}",
       "chmod +x /tmp/caddy.sh",
       "/tmp/caddy.sh",
-      "chmod +x /tmp/grafana-agent.sh",
-      "/tmp/grafana-agent.sh ${var.GCLOUD_TOKEN}"
+      # "chmod +x /tmp/grafana-agent.sh",
+      # "/tmp/grafana-agent.sh ${var.GCLOUD_TOKEN}"
     ]
   }
 }
