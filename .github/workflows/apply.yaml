@@ -51,3 +51,19 @@ jobs:
           TF_VAR_GCLOUD_LOGS_USER: ${{ secrets.TF_VAR_GCLOUD_LOGS_USER }}
           TF_VAR_GCLOUD_TRACES_USER: ${{ secrets.TF_VAR_GCLOUD_TRACES_USER }}
           TF_VAR_GAGENT_PROFILE: ${{ secrets.TF_VAR_GAGENT_PROFILE }}
+
+  tag:
+    name: Tag the new server in mist
+    runs-on: ubuntu-20.04
+
+    steps:
+      # Since the caddy server was just created, need to wait for access to mist
+      - name: Wait for endpoint
+        uses: nev7n/wait_for_response@v1
+        with:
+          url: 'https://mist.brentgruber.com'
+          responseCode: 200
+          timeout: 30000
+          interval: 200
+
+      
