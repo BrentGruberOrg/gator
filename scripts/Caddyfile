@@ -3,5 +3,5 @@ mist.brentgruber.com {
 }
 
 argocd.k3s.brentgruber.com {
-    reverse_proxy 100.116.49.63:30096
+    reverse_proxy 100.116.49.63:31849
 }
