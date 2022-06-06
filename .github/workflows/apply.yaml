@@ -52,9 +52,13 @@ jobs:
           TF_VAR_GCLOUD_TRACES_USER: ${{ secrets.TF_VAR_GCLOUD_TRACES_USER }}
           TF_VAR_GAGENT_PROFILE: ${{ secrets.TF_VAR_GAGENT_PROFILE }}
 
+      - name: Terraform output
+        run: terraform output
+
   tag:
     name: Tag the new server in mist
     runs-on: ubuntu-20.04
+    needs: [apply]
 
     steps:
       # Since the caddy server was just created, need to wait for access to mist
