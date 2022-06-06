@@ -70,4 +70,11 @@ jobs:
           timeout: 300000 # 5 mins
           interval: 200
 
+      # Get clouds
+      - name: Get Cloud list
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://mist.brentgruber.com/api/v1/clouds'
+          method: 'GET'
+
       
