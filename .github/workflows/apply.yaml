@@ -67,7 +67,7 @@ jobs:
         with:
           url: 'https://mist.brentgruber.com'
           responseCode: 200
-          timeout: 30000
+          timeout: 300000 # 5 mins
           interval: 200
 
       
