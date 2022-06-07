@@ -5,3 +5,7 @@ mist.brentgruber.com {
 argocd.k3s.brentgruber.com {
     reverse_proxy 100.116.49.63:31849
 }
+
+grafana.k3s.brentgruber.com {
+    reverse_proxy 100.116.49.63:31849
+}
