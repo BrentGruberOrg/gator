@@ -72,6 +72,7 @@ jobs:
 
       # Get clouds
       - name: Get Machine List
-        run: curl --header 'Authorization: ${{ secrets.MIST_TOKEN}}' https://mist.brentgruber.com/api/v2/machines
+        run: |
+          curl --header 'Authorization: ${{ secrets.MIST_TOKEN}}' https://mist.brentgruber.com/api/v2/machines
 
       
