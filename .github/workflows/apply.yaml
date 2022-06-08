@@ -71,11 +71,7 @@ jobs:
           interval: 200
 
       # Get clouds
-      - name: Get Cloud list
-        uses: fjogeleit/http-request-action@v1
-        with:
-          url: 'https://mist.brentgruber.com/api/v2/machines'
-          method: 'GET'
-          customHeaders: '{"Authorization": "${{ secrets.MIST_TOKEN }}" }'
+      - name: Get Machine List
+        run: curl --header 'Authorization: ${{ secrets.MIST_TOKEN}}' https://mist.brentgruber.com/api/v2/machines
 
       
