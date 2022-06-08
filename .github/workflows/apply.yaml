@@ -59,6 +59,7 @@ jobs:
     name: Tag the new server in mist
     runs-on: ubuntu-20.04
     needs: [apply]
+    # TODO: This should me a matrix job that runs on all provisioned droplets
 
     steps:
       # Since the caddy server was just created, need to wait for access to mist
@@ -70,11 +71,10 @@ jobs:
           timeout: 300000 # 5 mins
           interval: 200
 
-      # Get clouds
+      # Get machine
+      # TODO: make this a conditional that fails if more than one returned
       - name: Get Machine List
         run: |
-          curl --header 'Authorization: ${{ secrets.MIST_TOKEN}}' \
-          https://mist.brentgruber.com/api/v2/machines?search=name%3Dwww-0&only=id \
-          | jq .data[0].id
+          curl --header 'Authorization: ${{ secrets.MIST_TOKEN}}' https://mist.brentgruber.com/api/v2/machines?search=name%3Dwww-0&only=id | jq .data[0].id  
 
       
