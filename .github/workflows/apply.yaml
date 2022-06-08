@@ -76,6 +76,6 @@ jobs:
         with:
           url: 'https://mist.brentgruber.com/api/v2/machines?name=www-0'
           method: 'GET'
-          customHeaders: '{"Authorization": ${{ secrets.MIST_TOKEN }} }'
+          customHeaders: '{"Authorization": "${{ secrets.MIST_TOKEN }}" }'
 
       
