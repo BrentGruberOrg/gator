@@ -74,7 +74,7 @@ jobs:
       - name: Get Cloud list
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://mist.brentgruber.com%2Fapi%2Fv2%2Fmachines%3Fname%3Dwww-0'
+          url: 'https://mist.brentgruber.com/api/v2/machines'
           method: 'GET'
           customHeaders: '{"Authorization": "${{ secrets.MIST_TOKEN }}" }'
 
