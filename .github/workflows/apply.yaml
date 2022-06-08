@@ -76,5 +76,6 @@ jobs:
         with:
           url: 'https://mist.brentgruber.com/api/v1/clouds'
           method: 'GET'
+          bearerToken: ${{ secrets.MIST_TOKEN }}
 
       
