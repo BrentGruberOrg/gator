@@ -13,3 +13,7 @@ argocd.k3s.brentgruber.com {
 grafana.k3s.brentgruber.com {
     reverse_proxy 100.116.49.63:31849
 }
+
+kibana.k3s.brentgruber.com {
+    reverse_proxy 100.116.49.63:31849
+}
