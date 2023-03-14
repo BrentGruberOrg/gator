@@ -2,6 +2,10 @@ argocd.tools.brentgruber.com {
     reverse_proxy 100.105.40.218:32346
 }
 
+argocd.tools.brentgruber.com {
+    reverse_proxy 100.105.40.218:32346
+}
+
 longhorn.tools.brentgruber.com {
     reverse_proxy 100.105.40.218:32346
 }
