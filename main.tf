@@ -44,12 +44,12 @@ resource "digitalocean_droplet" "caddy" {
       "/tmp/tailscale.sh ${var.TAILSCALE_TOKEN}",
       "chmod +x /tmp/caddy.sh",
       "/tmp/caddy.sh",
-      "chmod +x /tmp/grafana-agent.sh",
-      "/tmp/grafana-agent.sh ${var.GCLOUD_PASSWORD} ${var.GCLOUD_METRICS_USER} ${var.GCLOUD_LOGS_USER} ${var.GCLOUD_TRACES_USER} ${var.GAGENT_PROFILE} ${var.GCLOUD_TOKEN}",
+      #"chmod +x /tmp/grafana-agent.sh",
+      #"/tmp/grafana-agent.sh ${var.GCLOUD_PASSWORD} ${var.GCLOUD_METRICS_USER} ${var.GCLOUD_LOGS_USER} ${var.GCLOUD_TRACES_USER} ${var.GAGENT_PROFILE} ${var.GCLOUD_TOKEN}",
       # Have to restart journald service, otherwise not getting any logs
       "systemctl restart systemd-journald",
-      "systemctl restart caddy.service",
-      "systemctl restart grafana-agent.service"
+      "systemctl restart caddy.service"
+      #"systemctl restart grafana-agent.service"
     ]
   }
 }
