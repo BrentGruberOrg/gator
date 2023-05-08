@@ -13,7 +13,3 @@ grafana.tools.brentgruber.com {
 longhorn.tools.brentgruber.com {
     reverse_proxy 100.105.40.218:32346
 }
-
-kasm.brentgruber.com {
-    reverse_proxy 164.152.29.251:8443
-}
